@@ -38,6 +38,7 @@ executable reserve
     , transformers
     , mtl
     , hint
+    , exceptions
   other-modules:
       Interpreter
       Options
@@ -63,6 +64,7 @@ test-suite spec
     , transformers
     , mtl
     , hint
+    , exceptions
     , hspec >= 2
     , QuickCheck
     , http-conduit

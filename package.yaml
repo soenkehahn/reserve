@@ -23,6 +23,7 @@ dependencies:
   - transformers
   - mtl
   - hint
+  - exceptions
 
 executables:
   reserve:

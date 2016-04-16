@@ -37,7 +37,7 @@ withSession opts action =
 run :: Options -> IO ()
 run opts = withSession opts $ \(Session s) -> forever $ do
   (h, _, _) <- liftIO $ accept s
-  Interpreter.reload
+  _ <- Interpreter.reload
   Interpreter.start (optionsAppArgs opts)
   c <- liftIO $ inputStreamFromHandle h
   let send :: ByteString -> IO ()
